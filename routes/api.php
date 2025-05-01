@@ -11,4 +11,7 @@ Route::get('/user', function (Request $request) {
 
 Route::get("/categories/{id}" , [CategoryController::class , "show" ]);
 Route::get("/categories" , [CategoryController::class , "index" ]);
+Route::post("/category" , function(Request $request) {
+$category = Category::create($request->all());
 
+});
